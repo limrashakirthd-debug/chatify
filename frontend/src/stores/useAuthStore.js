@@ -47,7 +47,7 @@ export const useAuthStore = create((set) => ({
 
       toast.success("Logged in successfully");
 
-      get().connectSocket();
+    //   get().connectSocket();
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
