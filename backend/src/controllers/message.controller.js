@@ -1,5 +1,12 @@
+import fs from "fs";
+
+console.log(
+  "Models folder:",
+  fs.readdirSync(new URL("../models/", import.meta.url)),
+);
+
 import cloudinary from "../lib/cloudinary.js";
-import Message from "../models/Message.js";
+import Message from "../models/message.js";
 import User from "../models/User.js";
 
 export const getAllContacts = async (req, res) => {
