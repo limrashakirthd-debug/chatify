@@ -1,4 +1,14 @@
-import "dotenv/config";
+// import "dotenv/config";
+
+// chatgpt
+import dotenv from "dotenv";
+
+import path from "path";
+
+// Load .env from backend root
+dotenv.config({ path: path.resolve(process.cwd(), "../.env") });
+// chatgpt
+
 
 export const ENV = {
   PORT: process.env.PORT,
