@@ -6,18 +6,7 @@ import { useAuthStore } from "../stores/useAuthStore";
 function ChatHeader() {
   const { selectedUser, setSelectedUser } = useChatStore();
   const { onlineUsers = [] } = useAuthStore();
-  // const isOnline = onlineUsers.includes(selectedUser._id);
-
-  // chatgpt
-  // if (!selectedUser) return null; // early return if no user is selected
-
-  // const isOnline = onlineUsers.includes(selectedUser._id);
-  const isOnline =
-    selectedUser && onlineUsers
-      ? onlineUsers.includes(selectedUser._id)
-      : false;
-
-  // chatgpt
+  const isOnline = onlineUsers.includes(selectedUser._id);
 
   useEffect(() => {
     const handleEscKey = (event) => {
