@@ -26,8 +26,8 @@ function ChatsList() {
         >
           <div className="flex items-center gap-3">
             <div
-              // className={`avatar ${onlineUsers.includes(chat._id) ? "online" : "offline"}`}
-              className={`avatar online`}
+              className={`avatar ${onlineUsers.includes(chat._id) ? "online" : "offline"}`}
+              // className={`avatar online`}
             >
               <div className="size-12 rounded-full">
                 <img
