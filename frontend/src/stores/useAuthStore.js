@@ -47,7 +47,7 @@ export const useAuthStore = create((set) => ({
 
       toast.success("Logged in successfully");
 
-    //   get().connectSocket();
+      //   get().connectSocket();
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
@@ -60,10 +60,31 @@ export const useAuthStore = create((set) => ({
       await axiosInstance.post("/auth/logout");
       set({ authUser: null });
       toast.success("Logged out successfully");
-    //   get().disconnectSocket();
+      //   get().disconnectSocket();
     } catch (error) {
       toast.error("Error logging out");
       console.log("Logout error:", error);
+    }
+  },
+
+  updateProfile: async (data) => {
+    try {
+      const res = await axiosInstance.put("/auth/update-profile", data);
+
+      set({ authUser: res.data });
+      toast.success("Profile updated successfully");
+    } catch (error) {
+      console.log("Error in update profile:", error);
+
+      //   chatgpt
+      //   const message = error.response?.data?.message || "Something went wrong";
+
+      //   toast.error(message);
+      // chatgpt
+      //   toast.error(error.response?.data?.message || "Update failed")
+      // chatgpt
+
+      toast.error(error.response.data.message);
     }
   },
 }));

@@ -23,7 +23,14 @@ export const useChatStore = create((set, get) => ({
     set({ isUsersLoading: true });
     try {
       const res = await axiosInstance.get("/messages/contacts");
-      set({ allContacts: res.data });
+
+      // chatgpt
+      console.log("Contacts API response:", res);
+
+      set({ allContacts: res?.data || [] });
+      // chatgpt
+
+      // set({ allContacts: res.data });
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
@@ -34,7 +41,15 @@ export const useChatStore = create((set, get) => ({
     set({ isUsersLoading: true });
     try {
       const res = await axiosInstance.get("/messages/chats");
-      set({ chats: res.data });
+
+      // chatgpt
+      console.log("Chats API response:", res);
+
+      // Safety check
+      set({ chats: res?.data || [] }); // <- never crash even if res or res.data is undefined
+      // chatgpt
+
+      // set({ chats: res.data || [] });
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
