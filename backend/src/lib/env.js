@@ -10,6 +10,10 @@ dotenv.config({ path: path.resolve(process.cwd(), "../.env") });
 // chatgpt
 
 
+// chatgpt added
+// console.log("JWT_SECRET from ENV:", process.env.JWT_SECRET);
+// chatgpt added
+
 export const ENV = {
   PORT: process.env.PORT,
   MONGO_URI: process.env.MONGO_URI,

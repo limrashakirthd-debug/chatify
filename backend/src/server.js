@@ -1,12 +1,12 @@
 // deployment issues
 
-console.log("ENV CHECK:", {
-  RESEND: process.env.RESEND_API_KEY ? "SET" : "UNDEFINED",
-  MONGO: process.env.MONGO_URI ? "SET" : "UNDEFINED",
-});
+// console.log("ENV CHECK:", {
+//   RESEND: process.env.RESEND_API_KEY ? "SET" : "UNDEFINED",
+//   MONGO: process.env.MONGO_URI ? "SET" : "UNDEFINED",
+// });
 
-console.log("RESEND_API_KEY =", process.env.RESEND_API_KEY);
-console.log("MONGO_URI =", process.env.MONGO_URI ? "set" : "undefined");
+// console.log("RESEND_API_KEY =", process.env.RESEND_API_KEY);
+// console.log("MONGO_URI =", process.env.MONGO_URI ? "set" : "undefined");
 
 // deployment issues
 

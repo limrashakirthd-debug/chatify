@@ -11,6 +11,8 @@ import { arcjetProtection } from "../middleware/arcjet.middleware.js";
 
 const router = express.Router();
 
+
+// temporarily commented chatgpt suggestion
 router.use(arcjetProtection);
 
 
